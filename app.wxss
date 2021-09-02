@@ -1,0 +1,9 @@
+/* app.wxss */
+text{
+  color:#666;
+  font-size: 24rpx;
+  font-family: 'MicroSoft Yahei';
+}
+input{
+  font-family: 'MicroSoft Yahei';
+}

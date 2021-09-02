@@ -1,0 +1,20 @@
+<!--components/movie-list/index.wxml-->
+
+<!-- 使用外部样式类 -->
+<view class="container l-class">
+  <view class="title-container">
+    <text>{{title}}</text>
+    <text class="more-text">更多 ></text>
+  </view>
+  <!-- 组件的嵌套 -->
+  <view class="movie-container">
+    <!-- <movie />
+    <movie />
+    <movie /> -->
+    <!-- 给movie组件传递电影数据 -->
+    <!-- wx:key="id" 绑定每个电影的唯一id -->
+    <block wx:for="{{movies}}" wx:key="id" wx:for-item="movie">
+      <movie movie="{{movie}}"/>
+    </block>
+  </view>
+</view>

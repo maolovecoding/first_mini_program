@@ -1,0 +1,14 @@
+/* pages/more-movie/more-movie.wxss */
+/* 容器 */
+.container {
+  display: flex;
+  flex-direction: row;
+  /* 排列不下的时候，自动换行 */
+  flex-wrap: wrap;
+  padding: 30rpx 28rpx;
+  justify-content: space-between;
+}
+
+.movie {
+  margin-bottom: 26rpx;
+}

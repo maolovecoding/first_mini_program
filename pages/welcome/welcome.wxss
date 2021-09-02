@@ -1,0 +1,56 @@
+/* pages/welcome/welcome.wxss */
+
+/* 单位：rpx 会自适应屏幕的尺寸等，给我们一种很舒服的视觉体验，换了机型 会自适应大小 */
+/* 顶层容器page，设置背景色 */
+page {
+  background-color: #b3d4db;
+}
+
+/* 外层容器 */
+.container {
+  /* 开启弹性布局 */
+  display: flex;
+  /* 排列方向，垂直排列 */
+  flex-direction: column;
+  /* 在排列方向的侧轴上居中 */
+  align-items: center;
+}
+
+/* 设置头像样式 */
+.user-avatar {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 50% 50%;
+  margin-top: 160rpx;
+}
+m-avatar{
+  margin-top: 160rpx;
+}
+
+/* 昵称 */
+.motto {
+  /* color:#666; */
+  margin-top: 100px;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+/* 设置模拟的按钮外边框 */
+.btn-journey-container {
+  margin-top: 150rpx;
+  border: 1rpx solid #405f80;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 10px;
+  /* 文字居中 */
+  text-align: center;
+
+}
+
+/* 按钮文字 */
+.journey {
+  font-size: 24rpx;
+  color: #405f80;
+  line-height: 80rpx;
+  font-weight: bold;
+}

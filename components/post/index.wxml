@@ -1,0 +1,24 @@
+<!--components/post/index.wxml-->
+
+<view data-post-id="{{postData.postId}}" class="post-container" bind:tap="onTap">
+  <!-- 第一部分 作者 日期 -->
+  <view class="post-author-date">
+    <!-- 头像 -->
+    <image class="post-author" src="{{postData.avatar}}"></image>
+    <text class="post-date">{{postData.date}}</text>
+  </view>
+  <!-- 第二部分 文章标题 -->
+  <text class="post-title" user-select="true">{{postData.title}}</text>
+  <!-- 第三部分 -->
+  <image class="post-image" src="{{postData.imgSrc}}"></image>
+  <!-- 第四部分 文章内容 -->
+  <!-- user-select 方便用户复制 -->
+  <text class="post-content">{{postData.content}}</text>
+  <!-- 第五部分 -->
+  <view class="post-like">
+    <l-icon color="#666" size="28" name="favor" class="post-like-image" />
+    <text class="post-like-font">{{postData.collection}}</text>
+    <l-icon color="#666" size="32" name="eye" class="post-like-image" />
+    <text class="post-like-font">{{postData.reading}}</text>
+  </view>
+</view>

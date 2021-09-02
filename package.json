@@ -1,0 +1,15 @@
+{
+  "name": "study-demo-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "毛毛",
+  "license": "ISC",
+  "dependencies": {
+    "lin-ui": "^0.8.7"
+  }
+}

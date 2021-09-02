@@ -1,0 +1,26 @@
+/* components/movie-list/index.wxss */
+/* 组件容器 */
+.container {
+  padding: 36rpx 28rpx;
+  /* 设置组件的背景色 */
+  /* background-color: #fff; */
+}
+
+/* 标题容器 */
+.title-container {
+  display: flex;
+  flex-direction: row;
+  /* 主轴排列方式 两端对齐*/
+  justify-content: space-between;
+  margin-bottom: 26rpx;
+}
+.more-text{
+  color:#1f4ba5;
+}
+
+/* 海报组件容器 */
+.movie-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

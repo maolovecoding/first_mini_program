@@ -1,0 +1,41 @@
+<!--pages/posts/posts.wxml-->
+
+<view>
+  <!-- 使用官方提供的swiper组件 来做轮播图 -->
+  <!-- swiper 滑块视图容器，这个容器不仅仅是用来滑动图片，可以做很多事情 -->
+  <!-- 
+    indicator-dots="true" 显示轮播图的指示点
+    但是，即使我们设置 indicator-dots="false" 也就是设置属性值为false
+    我们的轮播图小指示点 也不会消失，除非我们不设置这个属性，或者
+    我们设置属性值为 indicator-dots="{{false}}"
+    那么问题来了：为什么我们设置属性值为 {{false}} 才能表示否定的概念呢？
+    原因是，不加双花括号，我们小程序会把这个属性值当做普通的字符串，普通的字符串在js中我们知道会转为true，这里也是一样。
+    双花括号里面写false 才能表示false
+    注意：关于双花括号的使用我们在后面会在说，实际上双花括号里面的数据会被当做js中的变量或者表达式进行运算。
+   -->
+  <!-- autoplay="true" 自动轮播 -->
+  <!-- indicator-active-color="#fff" 指示点激活的颜色 -->
+  <!-- circular="true"循环播放图片 -->
+  <!-- interval="2000" 图片切换间隔时长 字符串的数字内部会被转型 -->
+  <swiper indicator-dots="{{true}}" autoplay="true" indicator-active-color="#fff" circular="true" interval="2000">
+    <!-- 一般为了让图片撑满容器，需要设置容器的大小，和图片的大小，swipe-item 可以不设置 -->
+    <swiper-item>
+      <image bind:tap="onGoToDetail" data-post-id="1" src="/images/post/bl.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image bind:tap="onGoToDetail" data-post-id="5" src="/images/post/cat.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image bind:tap="onGoToDetail" data-post-id="4" src="/images/post/vr.png"></image>
+    </swiper-item>
+  </swiper>
+
+  
+
+  <block wx:for="{{posts}}" wx:key="postId" wx:for-item="post">
+    <!-- 监听post组件的自定义事件 -->
+    <post bind:postTap="onGoToDetail" post-data="{{post}}"></post>
+  </block>
+
+  
+</view>

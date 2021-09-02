@@ -1,0 +1,17 @@
+/* pages/movies/movies.wxss */
+
+/* 设置当前页面的背景色 */
+page {
+  background-color: #f2f2f2;
+}
+
+.movie-list {
+  margin-bottom: 30rpx;
+  background-color: #fff;
+}
+
+/* 外部样式类 */
+.ex-search-bar {
+  /* 可能发生了样式冲突，所以我们需要提高优先级 */
+  height: 90rpx !important;
+}

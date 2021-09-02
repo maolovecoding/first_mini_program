@@ -1,0 +1,91 @@
+/* pages/posts/posts.wxss */
+
+/* 设置轮播图的大小 */
+swiper {
+  width: 100%;
+  height: 460rpx;
+}
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 文章样式 */
+.post-container {
+  /* 弹性布局 */
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+  /* 上下边框线 */
+  border-top: 1rpx solid #ededed;
+  border-bottom: 1rpx solid #ededed;
+  padding-bottom: 10rpx;
+}
+
+/* 作者 日期样式 */
+.post-author-date {
+  margin: 10rpx 0 20rpx 10rpx;
+  display: flex;
+  flex-direction: row;
+  /* flex 布局居中方案 */
+  align-items: center;
+}
+
+.post-author {
+  width: 60rpx;
+  height: 60rpx;
+  /* 头像和文字居中 */
+  /* vertical-align: middle; */
+
+}
+
+.post-date {
+  margin-left: 20rpx;
+  font-size:26rpx;
+  /* vertical-align: middle; */
+}
+
+/* 文章标题 */
+.post-title{
+  font-size:34rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  color:#333;
+}
+/* 文章主图 */
+.post-image{
+  width: 100%;
+  height: 340rpx;
+  margin-bottom: 30rpx;
+}
+/* 文章内容 */
+.post-content{
+  color:#666;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  line-height: 40rpx;
+  letter-spacing: 2rpx;
+  text-indent: 2em;
+}
+/* 文章模拟阅读量 */
+.post-like{
+  display: flex;
+  flex-direction: row;
+  margin-left: 26rpx;
+  align-items: center;
+}
+.post-like-image{
+  /* height: 32rpx;
+  width: 32rpx; */
+  margin-right: 16rpx;
+}
+.post-like-font{
+  margin-right: 40rpx;
+  font-size: 26rpx;
+}

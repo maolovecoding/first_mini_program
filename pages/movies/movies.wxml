@@ -1,0 +1,13 @@
+<!--pages/movies/movies.wxml-->
+
+<!-- 搜索栏 -->
+<!-- bg-color属性 更改背景颜色 -->
+<!-- 我们这里使用该组件提供好的外部样式类，进行样式的更改，修改高度 -->
+<!-- 这些东西官网都有说明 -->
+<!-- 使用show-cancel属性 可以取消 右侧的取消按钮及其事件 -->
+<l-search-bar l-class="ex-search-bar" placeholder="请输入您想看的电影" show-cancel="{{false}}"/>
+
+<!-- 外部样式类的使用 将我们实际的类名 通过组件设置好的引用外部样式类的类名进行赋值 进而传递给组件内部进行设置 -->
+<movie-list data-type="in_theaters" bindtap="onGoToMore" movies="{{inTheaters}}" title="正在热映" l-class="movie-list" />
+<movie-list data-type="coming_soon" bindtap="onGoToMore" movies="{{comingSoon}}" title="正在上映" l-class="movie-list" />
+<movie-list data-type="top250" bindtap="onGoToMore" movies="{{top250}}" title="豆瓣Top250" l-class="movie-list" />

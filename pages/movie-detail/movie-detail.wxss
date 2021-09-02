@@ -1,0 +1,166 @@
+/* pages/movie-detail/movie-detail.wxss */
+
+/* 容器 */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 头部海报 做模糊效果图 */
+.head-img {
+  width: 100%;
+  height: 320rpx;
+  /* 模糊效果 */
+  filter: blur(18px);
+}
+
+/* 标题 */
+.head-image-hover {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 320rpx;
+  position: absolute;
+}
+
+.main-title {
+  font-size: 38rpx;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+}
+
+.sub-title {
+  font-size: 28rpx;
+  color: #fff;
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+}
+
+.like {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+}
+
+/* 数字高亮 */
+.highlight-font {
+  color: #f21146;
+  font-size: 22rpx;
+  font-weight: 600;
+  margin-right: 10rpx;
+}
+
+.plain-font {
+  color: #666;
+  font-size: 22rpx;
+  margin-right: 30rpx;
+}
+
+
+/* 电影海报 */
+.movie-image {
+  position: absolute;
+  top: 160rpx;
+  right: 30rpx;
+  height: 238rpx;
+  width: 175rpx;
+}
+
+/* 电影简介 */
+.summary {
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  color: #777;
+}
+
+.orginal-title {
+  color: #1f3463;
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 10rpx;
+}
+.score-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.average{
+  margin-left: 20rpx;
+}
+
+
+.mark {
+  margin-right: 30rpx;
+  /* 不换行 */
+  white-space: nowrap;
+  color: #999;
+}
+/* 水平线 */
+.hr{
+  width: 100%;
+  height: 1px;
+  margin-top: 50rpx;
+  background-color: #d9d9d9;
+}
+
+/* 剧情简介样式 */
+.synopsis{
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50rpx;
+}
+.synopsis-font{
+  font-size: 32rpx;
+  color:#999;
+}
+
+.summary-content{
+  margin-top: 20rpx;
+  margin-right: 40rpx;
+  line-height: 40rpx;
+  letter-spacing: 1px;
+  text-indent: 2em;
+}
+
+/* 影人简介布局 */
+.casts{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+
+}
+.casts-container{
+  display: flex;
+  flex-direction: row;
+  /* margin-bottom: 50rpx; */
+  height: 300rpx;
+}
+.cast-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40rpx;
+  margin-bottom: 40rpx;
+}
+.cast-img{
+  width: 170rpx;
+  height: 210rpx;
+  margin-bottom: 12rpx;
+}
+.cast-font{
+  color:#999;
+  margin-bottom: 40rpx;
+}

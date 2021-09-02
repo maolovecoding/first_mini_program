@@ -1,0 +1,20 @@
+<!--components/movie/index.wxml-->
+<!-- 电影容器 -->
+<view class="container" bindtap="onGoTODetail">
+  <!-- 电影海报 -->
+  <image class="poster" src="{{movie.images.large}}"></image>
+  <!-- 电影标题 -->
+  <text class="title">{{movie.title}}</text>
+  <view class="rate-container">
+    <!-- 评分 -->
+    <!-- score属性 显示点亮多少星星 可以是小数 -->
+    <!-- 星星的大小 size 进行设置 -->
+    <!-- 使用count属性可以修改星星的数量（默认是五个星） -->
+    <!-- 设置禁用点击 disabled="true" -->
+    <!-- 使用active-color属性 可以修改点亮的星星的颜色 -->
+    <!-- 使用 inActive-color 属性 可以修改未选中的星星颜色 -->
+    <l-rate disabled="{{true}}" score="{{movie.rating.stars / 10}}" size="22" />
+    <!-- 显示评分 -->
+    <text class="score">{{movie.rating.average}}</text>
+  </view>
+</view>

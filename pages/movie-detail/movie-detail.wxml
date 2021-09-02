@@ -1,0 +1,90 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+<view class="container">
+  <!-- 头部大图(做模糊效果) -->
+  <!-- 图片的填充模式，默认的填充模式，在我们不知道图片比例的情况下，一般设置宽高撑满，容易出现变形。拉伸 -->
+  <!-- mode="aspectFill" 设置这个值，会保持原来图片的比例进行缩放，可以保证某一个方向是完整的，另一个方向被裁减 -->
+  <image mode="aspectFill" class="head-img" src="{{movie.image}}"></image>
+  <!-- 头部标题，副标题 -->
+  <view class="head-image-hover">
+    <text class="main-title">{{movie.title}}</text>
+    <text class="sub-title">{{movie.sub_title}}</text>
+
+    <!-- 多少人想看，多少人喜欢 -->
+    <view class="like">
+      <text class="highlight-font">{{movie.wishCount}}</text>
+      <text class="plain-font">人喜欢</text>
+      <text class="highlight-font">{{movie.commentsCount}}</text>
+      <text class="plain-font">条评论</text>
+    </view>
+    <!-- 电影海报 -->
+    <!-- 点击图片实现放大效果 -->
+    <image bind:tap="onViewPost" class="movie-image" src="{{movie.image}}"></image>
+  </view>
+
+  <!-- 电影简介 -->
+  <view class="summary">
+    <!-- 起始标题 -->
+    <view class="orgin-title">
+      <text>{{movie.originalTitle}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">评分</text>
+      <!-- lin-ui的评分组件 -->
+      <view class="score-container">
+        <l-rate size="22" disabled="{{true}}" score="{{movie.score}}"></l-rate>
+        <text class="average">{{movie.average}}</text>
+      </view>
+    </view>
+    <view class="flex-row">
+      <text class="mark">导演</text>
+      <!-- 导演可能有多个，需要进行数据处理 -->
+      <text>{{movie.directorsStr}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">影人</text>
+      <!-- 影人也需要进行数据处理，也是数组 -->
+      <text>{{movie.castsStr}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">类型</text>
+      <!-- 一般类型也是数组，都需要进行对原始处理 -->
+      <text>{{movie.genresStr}}</text>
+    </view>
+  </view>
+  <!-- 分割线 -->
+  <view class="hr"></view>
+
+  <!-- 剧情简介 -->
+  <view class="synopsis">
+    <text class="synopsis-font">剧情简介</text>
+    <text class="summary-content">{{movie.summary}}</text>
+  </view>
+  <view class="hr"></view>
+
+
+  <!-- 影人简介 -->
+  <view class="casts">
+    <!-- 标题 -->
+    <text class="cast-font">影人</text>
+    <!-- scroll-x="{{true}}" 表示进行横向滚动 -->
+    <!-- enable-flex = {{true}} 表示重新支持flex布局，scroll-view组件默认是不支持flex布局的，需要开启 -->
+    <scroll-view enable-flex="{{true}}" scroll-x="{{true}}" class="casts-container">
+      <!-- 列表循环 展示影人数据 -->
+      <block wx:for="{{movie.castsInfo}}" wx:key="index">
+        <view class="cast-container">
+          <image class="cast-img" src="{{item.img}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+        <!-- 模拟多个影人数据，让一个影人出现三次，做图片的滑动效果 -->
+        <view class="cast-container">
+          <image class="cast-img" src="{{item.img}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+        <view class="cast-container">
+          <image class="cast-img" src="{{item.img}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

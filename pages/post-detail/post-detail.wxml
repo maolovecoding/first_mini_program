@@ -1,0 +1,42 @@
+<!--pages/post-detail/post-detail.wxml-->
+
+<!-- 先静后动 -->
+<view class="container">
+
+  <view class="head-image-audio">
+    <image class="head-image" src="{{imgSrc}}"></image>
+    <!-- 实现音乐播放  -->
+    <!-- 播放和暂停图标的切换 条件渲染 -->
+    <!-- 当然这里用三元表达式就不需要使用两个标签了 -->
+    <image wx:if="{{!isPlaying}}" bind:tap="onMusicStart" class="audio" src="/images/music/music-start.png" />
+    <image wx:else bind:tap="onMusicStop" class="audio" src="/images/music/music-stop.png" />
+  </view>
+
+
+  <!-- 头像区域 -->
+  <view class="author-date">
+    <image class="avatar" src="{{avatar}}"></image>
+    <text class="author">{{author}}</text>
+    <text class="const-text">发表于</text>
+    <text class="date">{{dateTime}}</text>
+  </view>
+  <!-- 标题 -->
+  <text class="title">{{title}}
+  </text>
+
+  <!-- 图标 -->
+  <view class="tool">
+    <view class="circle">
+      <!-- 条件渲染：在收藏和未收藏的图标之间切换 -->
+      <image wx:if="{{!collected}}" bind:tap="onCollect" src="/images/icon/collection-anti.png"></image>
+      <image wx:else bind:tap="onCollect" src="/images/icon/collection.png"></image>
+      <!-- 点击触发文章分享事件 -->
+      <image bind:tap="onShare" class="share-image" src="/images/icon/share.png"></image>
+    </view>
+    <!-- 水平线 -->
+    <view class="horizon"></view>
+  </view>
+
+  <!-- 文章文本 -->
+  <text class="detail">{{detail}}</text>
+</view>

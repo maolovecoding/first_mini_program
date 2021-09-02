@@ -1,0 +1,30 @@
+<!--pages/welcome/welcome.wxml-->
+
+<!-- 使用view标签，作为最外层容器，包裹所有标签，view不是有具体含义的标签 -->
+<view class="container">
+  <!-- 1. 显示图片的标签 -->
+  <!-- 可以使用相对路径，也可以使用绝对路径 -->
+
+  <!-- <image  class="user-avatar" src="/images/avatar/avatar.png"></image> -->
+  <!-- 使用组件库 动态绑定用户的头像，昵称(绑定的语法后面再说) -->
+  <!-- 使用size属性可以指定大小 -->
+  <!-- shape属性可以指定头像的样式，圆的还是方的 -->
+  <!-- 使用placement 可以指定头像和昵称的排列位置，这里上下排列 -->
+  <m-avatar placement="bottom" size="190" shape="circle" open-data="{{['userAvatarUrl','userNickName']}}" />
+
+  <!-- 2. 显示文本的标签 -->
+  <text class="motto">听雨少年</text>
+  <!-- 直接书写文本，也可以正常显示，但是我们建议还是使用text标签进行包裹，遵守规范，而且没有标签包裹，我们也难以设置样式 -->
+  <!-- 我也直接显示了！ -->
+  <!-- 按钮标签 -->
+  <!-- 官方的提供的按钮我们一般不推荐使用，因为样式等问题很难修正 -->
+  <!-- <button>我是按钮</button> -->
+
+  <!-- 这里使用view模拟一个button组件 -->
+  <!-- 捕获事件： bind:事件名称="函数名称" -->
+    <view class="btn-journey-container" catch:tap="onTap">
+      <!-- 设置样式模拟出我们喜欢的按钮样式 -->
+      <text class="journey">开启小程序之旅</text>
+    </view>
+
+</view>

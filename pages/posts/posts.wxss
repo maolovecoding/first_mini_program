@@ -1,0 +1,14 @@
+/* pages/posts/posts.wxss */
+
+/* 设置轮播图的大小 */
+swiper {
+  width: 100%;
+  height: 460rpx;
+}
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+
